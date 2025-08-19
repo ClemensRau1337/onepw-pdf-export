@@ -6,6 +6,12 @@
 
 ## 🇩🇪 Deutsch
 
+**[Deutsch 🇩🇪](#deutsch-) | [English 🇬🇧](#english-)**
+
+---
+
+## Deutsch 🇩🇪
+
 ⚠️ **HOHES RISIKO**: Dieses Tool exportiert **alle Passwörter** aus 1Password in ein **verschlüsseltes PDF**.  
 Verwende es **nur für dich selbst** und behandle die PDF-Datei mit höchster Vorsicht. In Unternehmensumgebungen können Exporte gegen Richtlinien verstoßen oder Audits auslösen.
 
@@ -50,7 +56,7 @@ Verwende es **nur für dich selbst** und behandle die PDF-Datei mit höchster Vo
 
 3. **Repo bauen**
    ```bash
-   git clone https://github.com/example/onepw-pdf-export.git
+   git clone git@github.com:ClemensRau1337/onepw-pdf-export.git
    cd onepw-pdf-export
    go mod tidy
    go build -o onepw-pdf-export ./
@@ -123,7 +129,7 @@ Dieses Projekt ist **nicht mit 1Password affiliiert**.
 
 ---
 
-## 🇬🇧 English {#english}
+## English 🇬🇧
 
 ⚠️ **HIGH RISK**: This tool exports **all your passwords** from 1Password into an **encrypted PDF**.  
 Use it **only for yourself** and treat the resulting PDF with extreme caution. In corporate environments, exports may violate policies or trigger audits.
@@ -140,6 +146,8 @@ Use it **only for yourself** and treat the resulting PDF with extreme caution. I
 - Optional password masking
 
 ---
+
+**UTF‑8:** Das PDF verwendet eine Unicode-Schrift (DejaVuSans). Fehlt sie lokal, lädt das Tool die Schrift automatisch herunter. Setze `ONEPW_PDF_FONT_DIR`, um den Speicherort zu steuern.
 
 ### 🧰 Requirements
 1. **Install 1Password CLI**
@@ -239,6 +247,3 @@ op signin
 ### 📄 License
 MIT – see [LICENSE](LICENSE). Use at your **own risk**.  
 This project is **not affiliated with 1Password**.
-
-
-**UTF‑8:** Das PDF verwendet eine Unicode-Schrift (DejaVuSans). Fehlt sie lokal, lädt das Tool die Schrift automatisch herunter. Setze `ONEPW_PDF_FONT_DIR`, um den Speicherort zu steuern.
