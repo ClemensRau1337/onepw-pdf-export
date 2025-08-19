@@ -1,0 +1,33 @@
+.DS_Store
+Thumbs.db
+
+# Build outputs
+onepw-pdf-export
+bin/
+dist/
+build/
+
+# Go build/test artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/
+
+# Archives
+*.zip
+*.tar.gz
+*.tgz
+
+# Sensitive exports (⚠️ never commit secrets)
+*.pdf
+*.csv
+*.1pux
+*.json
+*.txt
+
+# Fonts cache (optional override via ONEPW_PDF_FONT_DIR)
+.cache/
