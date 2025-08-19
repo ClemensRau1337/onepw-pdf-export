@@ -1,9 +1,5 @@
 # onepw-pdf-export
 
-**Deutsch | [English](#english)**
-
----
-
 ## 🇩🇪 Deutsch
 
 **[Deutsch 🇩🇪](#deutsch-) | [English 🇬🇧](#english-)**
@@ -69,11 +65,23 @@ Verwende es **nur für dich selbst** und behandle die PDF-Datei mit höchster Vo
 **Interaktiv:** Wenn du Flags weglässt, fragt das Tool **ALLE Parameter** ab (Ausgabedatei, Risikoakzeptanz, Tresor-Auswahl, Passwort, Layout, Maskierung, Suche). Während des Exports siehst du einen **Spinner/Fortschritt**.
 
 
-#### Standard (op) – ohne Subcommand
+#### Standard via 1Password CLI
+
+### Login to 1Password CLI (Siehe Requirements)
 ```bash
 op signin
-./onepw-pdf-export live --out my-vault.pdf --i-understand-the-risk
-# fragt nach PDF-Passwort (verdeckt, mit Wiederholung)
+```
+
+### Starten (interaktiv)
+```bash
+./onepw-pdf-export live
+# prompts for all details
+```
+
+### CLI paramter
+```bash
+./onepw-pdf-export ./onepw-pdf-export --out my-vault.pdf --i-understand-the-risk
+# prompts for password
 ```
 
 #### CSV
@@ -177,7 +185,7 @@ Use it **only for yourself** and treat the resulting PDF with extreme caution. I
 
 3. **Build this repo**
    ```bash
-   git clone https://github.com/example/onepw-pdf-export.git
+   git clone git@github.com:ClemensRau1337/onepw-pdf-export.git
    cd onepw-pdf-export
    go mod tidy
    go build -o onepw-pdf-export ./
@@ -191,10 +199,22 @@ Use it **only for yourself** and treat the resulting PDF with extreme caution. I
 
 
 #### Live via 1Password CLI
+
+### Login to 1Password CLI (See Requirements)
 ```bash
 op signin
-./onepw-pdf-export live --out my-vault.pdf --i-understand-the-risk
-# prompts for PDF password (hidden, confirmed)
+```
+
+### Starten (interaktiv)
+```bash
+./onepw-pdf-export live
+# prompts for all details
+```
+
+### CLI paramter
+```bash
+./onepw-pdf-export ./onepw-pdf-export --out my-vault.pdf --i-understand-the-risk
+# prompts for password
 ```
 
 #### CSV
