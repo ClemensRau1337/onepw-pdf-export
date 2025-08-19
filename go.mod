@@ -6,3 +6,5 @@ require (
 	github.com/jung-kurt/gofpdf v1.16.2
 	golang.org/x/term v0.23.0
 )
+
+require golang.org/x/sys v0.23.0 // indirect
